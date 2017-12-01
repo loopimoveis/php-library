@@ -1,6 +1,6 @@
 <?php
 
-namespace Loopimoveis\RabbiMQ;
+namespace Loopimoveis\RabbitMQ;
 
 
 /**
