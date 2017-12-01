@@ -54,3 +54,7 @@ use Loopimoveis\Classes\Example;
 $example = new Example(); /* output: 'I'm loading this class inside the project, horrrray!' */
 
 ```
+Para incluir como sub-módulo no projeto
+```
+git submodule add https://github.com/loopimoveis/php-library.git loopimoveis
+```
