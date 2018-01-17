@@ -16,7 +16,16 @@ class RabbitMQ extends RabbitMQBean
 {
     public function __construct()
     {
-        $this->setConnection(new AMQPStreamConnection($this->getServer(), $this->getPort(), $this->getUser(), $this->getPass()));
+        $_VHOST = 'loopimoveis';
+        $this->setConnection(
+            new AMQPStreamConnection(
+                $this->getServer(),
+                $this->getPort(),
+                $this->getUser(),
+                $this->getPass(),
+                $_VHOST
+            )
+        );
         $this->setChannel($this->getConnection()->channel());
     }
 
