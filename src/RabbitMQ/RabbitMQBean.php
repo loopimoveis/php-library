@@ -2,6 +2,10 @@
 
 namespace Loopimoveis\RabbitMQ;
 
+define("RB_SERVER", $_ENV['RB_SERVER']);
+define("RB_USER", $_ENV['RB_USER']);
+define("RB_PASS", $_ENV['RB_PASS']);
+define("RB_PORT", $_ENV['RB_PORT']);
 
 /**
  * Class RabbitMQBean
@@ -14,15 +18,10 @@ namespace Loopimoveis\RabbitMQ;
  */
 class RabbitMQBean
 {
-    /* Atributos para testes locais */
-    //private $server = 'localhost';
-    //private $user = '<login>';
-    //private $pass = '<senha>';
-
-    private $server = '169.57.176.103';
-    private $user = 'api';
-    private $pass = '6F3GZrEpXFdAykBz';
-    private $port = 5672; /* Porta para envio */
+    private $server = RB_SERVER;
+    private $user = RB_USER;
+    private $pass = RB_PASS;
+    private $port = RB_PORT; /* Porta para envio */
     private $connection;
     private $channel;
 
