@@ -22,8 +22,8 @@ class RabbitMQ extends RabbitMQBean
                 $this->getServer(),
                 $this->getPort(),
                 $this->getUser(),
-                $this->getPass(),
-                $_VHOST
+                $this->getPass()
+                // $_VHOST
             )
         );
         $this->setChannel($this->getConnection()->channel());
